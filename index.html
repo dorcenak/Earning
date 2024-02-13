@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Calculation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Time Calculation</h1>
+    <form id="calculationForm">
+        <label for="hours">How many hours have you worked?</label>
+        <input type="number" id="hours" name="hours" required>
+        <br>
+        <label for="minutes">What is the number of minutes you've seen in your Time Sheet?</label>
+        <input type="number" id="minutes" name="minutes" required>
+        <br>
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
