@@ -23,7 +23,11 @@ function calculate() {
     }
 
     const resultLabel = document.getElementById('result_label');
-    resultLabel.textContent = `You have worked for ${y2_int} hours and ${y2_rest} minutes.\nYou will get at least $${income.toFixed(2)}.`;
+    resultLabel.innerHTML = `You have worked for ${y2_int} hours and ${y2_rest} minutes (the minutes you saw in the system are not real-life minutes, that's why we converted them for you).<br>You will get at least <span id="currency">$</span><span id="incomeAmount">${income.toFixed(2)}</span>.`;
+
+    // Apply bold style to the currency sign and income amount
+    document.getElementById('currency').style.fontWeight = 'bold';
+    document.getElementById('incomeAmount').style.fontWeight = 'bold';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
