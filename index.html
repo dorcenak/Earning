@@ -3,24 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Calculation</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Earnings Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .square {
+            width: 400px; /* Adjust this to change the size of the square */
+            height: 550px; /* Adjust this to change the size of the square */
+            border: 4px solid blue; /* Change border color to blue */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .question {
+            margin-bottom: 10px; /* Adjusted margin */
+        }
+        .answer {
+            margin-bottom: 20px; /* Adjusted margin */
+        }
+        .logo {
+            width: 30%; /* Adjust this to fit the logo size */
+            margin-bottom: 20px;
+        }
+        .title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold; /* Make the title bold */
+        }
+        .support {
+            font-style: italic;
+            color: blue;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-    <h1>Time Calculation</h1>
-    <form id="calculationForm">
-        <label for="hours">How many hours have you worked?</label>
-        <input type="number" id="hours" name="hours" required>
-        <br>
-        <label for="minutes">What is the number of minutes you've seen in your Time Sheet?</label>
-        <input type="number" id="minutes" name="minutes" required>
-        <br>
-        <button type="button" onclick="calculate()">Calculate</button>
-    </form>
-    <div id="result"></div>
-</div>
+    <div class="square">
+        <img src="berea_logo.png" alt="Logo" class="logo">
+        <div class="title">Labor earning for WLS Level 1 ($6.09/hour)</div>
+        <div class="window">
+            <div class="question">
+                <label for="entry_hours">Hours worked:</label>
+            </div>
+            <div class="answer">
+                <input type="number" id="entry_hours">
+            </div>
 
+            <div class="question">
+                <label for="entry_minutes">Minutes worked:</label>
+            </div>
+            <div class="answer">
+                <input type="number" id="entry_minutes">
+            </div>
+
+            <div class="question">
+                <label>Do you pay taxes?</label>
+                <input type="radio" name="tax" value="Yes" checked> Yes
+                <input type="radio" name="tax" value="No"> No
+            </div>
+
+            <button id="calculate_button">Calculate</button>
+
+            <div id="result_label"></div>
+
+            <div class="support">Support me via <a href="https://cash.app/$KichemyDorcena" target="_blank" rel="noopener noreferrer">Cash App</a></div>
+        </div>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
