@@ -14,8 +14,15 @@
 <div class="container">
     <div class="square">
         <img src="berea_logo.png" alt="Logo" class="logo">
-        <div class="title">Labor earning for WLS Level 1 ($6.09/hour)</div>
+        <div class="title">Labor earning for WLS Level 1 & Break rate</div>
         <div class="window">
+            <div class="question">
+                <label for="level">Choose your level:</label>
+                <select id="level">
+                    <option value="6.09" selected>$6.09/hour</option>
+                    <option value="10">$10/hour</option>
+                </select>
+            </div>
             <div class="question">
                 <label for="entry_hours">Hours worked:</label>
             </div>
@@ -29,11 +36,10 @@
             <div class="answer">
                 <input type="number" id="entry_minutes">
             </div>
-
             <div class="question">
                 <label>Do you pay taxes?</label>
-                <input type="radio" name="tax" value="Yes" checked> Yes
-                <input type="radio" name="tax" value="No"> No
+                <input type="radio" name="tax" value="Yes" id="pay_taxes_yes" checked> Yes
+                <input type="radio" name="tax" value="No" id="pay_taxes_no"> No
             </div>
 
             <button id="calculate_button">Calculate</button>
