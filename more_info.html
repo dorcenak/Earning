@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Rate List</title>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+<script type="module">
+    const App = () => {
+        const payRates = [
+            { title: 'WLS Level 1', rate: ' $6.09' },
+            { title: 'WLS Level 2', rate: ' $6.30' },
+            { title: 'WLS Level 3', rate: '$6.51' },
+            { title: 'WLS Level 4', rate: '$6.72' },
+            { title: 'WLS Level 5', rate: ' $7.04' },
+            { title: 'WLS Level 6', rate: '$7.50' },
+            { title: 'Unclassified', rate: ' $8.00' },
+            { title: 'Labor Pool', rate: ' $10.00' },
+            { title: 'Break Rate (Summer, Fall, Spring, Winter)', rate: '$10.00' }
+            // Add more pay rates as needed
+        ];
+
+        return (
+            React.createElement('div', null,
+                React.createElement('h2', null, 'Work-Learning-Service Level Classification Pay Scale'),
+                React.createElement('ul', null,
+                    payRates.map((rate, index) =>
+                        React.createElement('li', { key: index }, `${rate.title}: ${rate.rate}`)
+                    )
+                ),
+                React.createElement('h2', null, 'General Rules'),
+                React.createElement('p', null, 'Each student at Berea College is required to complete a minimum of ten hours a week and adhere to the work schedule as required by the position and arranged with the supervisor.'),
+                React.createElement('p', null, 'Spring Break (Monday March 4th - Sunday March 10th) - Cannot work without a break contract May 5th is the last day of Spring Labor. Spring Break Hours do not count towards 160 hour minimum.')
+            )
+        );
+    };
+
+    ReactDOM.render(
+        React.createElement(App),
+        document.getElementById('root')
+    );
+</script>
+</body>
+</html>
