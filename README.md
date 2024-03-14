@@ -2,7 +2,7 @@
 
 This web application allows students at Berea College to calculate the amount of money they earn during their labor position. The application considers different hourly rates and provides the net income after accounting for taxes. Please beaware features change frequently.
 
-Access it here: https://linktr.ee/Earning.berea
+Access it here: https://linktr.ee/Earning.berea (Keep in mind one more page(more_info.html), which is already in this repo, still need to be added on this live website)
 
 ## Features
 
