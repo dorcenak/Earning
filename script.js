@@ -52,7 +52,7 @@ function calculate() {
     }
 
     let resultLabel = document.getElementById('result_label');
-    resultLabel.innerHTML = `You have worked for ${totalHours} hours.<br>Your gross income is $${grossIncome.toFixed(2)}.<br>After ${(payTaxes ? '14% tax deduction' : 'no tax deduction')}, your net income is $${income.toFixed(2)}.`;
+    resultLabel.innerHTML = `Your gross income is $${grossIncome.toFixed(2)}.<br>After ${(payTaxes ? '14% tax deduction' : 'no tax deduction')}, your net income is $${income.toFixed(2)}.`;
 
     // Apply bold style to the income amounts
     resultLabel.style.fontWeight = 'bold';
