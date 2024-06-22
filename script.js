@@ -9,10 +9,9 @@ function calculate() {
 
     // const entryMinutes = document.getElementById('entry_minutes').value.trim();
 
-    // Check if both hours and minutes are provided
-    // if (entryHours === '' || entryMinutes === '') {
-    if (entryHoursFloat === '') {
-        alert('Please enter both hours and minutes. We only accept numbers.');
+    // Check if entryHours is empty or not a valid number
+    if (entryHours === '' || isNaN(entryHoursFloat)) {
+        alert('Please enter valid hours. We only accept numbers.');
         return; // Exit the function early if validation fails
     }
 
